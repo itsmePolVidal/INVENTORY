@@ -1,0 +1,195 @@
+package inventory;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class InvF extends JFrame{
+
+
+
+	String [] row = new String []{
+			"Name",
+			"Age",
+			"Address",
+			"Contact No.",
+			"Gender"
+};
+
+
+	
+	//this will create a new Panel with BorderLayout
+	JPanel tblPanel = new JPanel(new BorderLayout());
+	
+	//this will create an array of JTextField with fixed size of 5
+	JTextField [] txtFields = new JTextField[6];
+	
+	//this will create an array of JLabel with fixed size of 5
+	JLabel [] lblFields = new JLabel[6];
+	
+	//this string array will be the text of the Jlabel
+	String [] strLblFields = {"Item Code : ", "Item Description : ", "Price : ", "Size : ", "Stocks : ","Re-Order Point : "};
+	
+	//this will create a JButton
+	JButton btnControl = new JButton();
+	JButton STI = new JButton();
+	JButton EDIT = new JButton();
+	JButton DEL = new JButton();
+	JButton SAVE = new JButton();
+	JButton CANCEL = new JButton();
+	
+	ImageIcon bg = new ImageIcon (new ImageIcon("INV BG.png").getImage().getScaledInstance(950, 450, Image.SCALE_SMOOTH));
+	JLabel img = new JLabel();
+	
+	
+	//ADD BUTTOn
+	ImageIcon ADDBG = new ImageIcon (new ImageIcon("ADD.png").getImage().getScaledInstance(500, 150, Image.SCALE_SMOOTH));
+	JLabel ADDB = new JLabel();
+
+	
+	InvF(){
+		this.setTitle("Table");
+		this.setSize(950, 450);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		this.setResizable(false);
+		
+		img.setIcon(bg);
+		img.setFocusable(false);
+		img.setBounds(0,0,950,450);
+		
+		int y = 50;
+		//this loop will set the properties of JTextField , JLabel
+		for(int i = 0; i <= lblFields.length -1 ; i++) {
+			//properties of JTextField
+			txtFields[i] = new JTextField();
+			txtFields[i].setBounds(180+50, y, 150, 25);
+			this.add(txtFields[i]);
+			
+			//properties of JLabel
+			lblFields[i] = new JLabel();
+			lblFields[i].setText(strLblFields[i]);
+			lblFields[i].setBounds(100, y, 150, 25);
+			this.add(lblFields[i]);
+			y+=30;
+		}
+		
+		btnControl.setBounds(180, 265, 100, 30);
+		btnControl.setText("ADD");
+		btnControl.setFocusable(false);
+		ADDB.setIcon(bg);
+		ADDB.setFocusable(false);
+		ADDB.setBounds(180,265,950,450);
+		btnControl.addActionListener(new ActionListener() 
+		
+		{
+			
+		//ADD BUTTON	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		STI.setBounds(70, 265, 100, 30);
+		STI.setText("STOCK IN");
+		STI.setFocusable(false);
+		STI.addActionListener(new ActionListener() 
+		
+		{
+			
+		//STOCK IN BUTTON	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		EDIT.setBounds(290, 265, 100, 30);
+		EDIT.setText("EDIT");
+		EDIT.setFocusable(false);
+		EDIT.addActionListener(new ActionListener() 
+		
+		{
+			
+		//EDIT BUTTON	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		DEL.setBounds(70, 280+40, 100, 30);
+		DEL.setText("DELETE");
+		DEL.setFocusable(false);
+		DEL.addActionListener(new ActionListener() 
+		
+		{
+			
+		//DELETE BUTTON	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		SAVE.setBounds(180, 280+40, 100, 30);
+		SAVE.setText("SAVE");
+		SAVE.setFocusable(false);
+		SAVE.addActionListener(new ActionListener() 
+		
+		{
+			
+		//SAVE BUTTON	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		CANCEL.setBounds(290, 280+40, 100, 30);
+		CANCEL.setText("CANCEL");
+		CANCEL.setFocusable(false);
+		CANCEL.addActionListener(new ActionListener() 
+		
+		{
+			
+		//CANCEL BUTTON
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		
+		
+		tblPanel.setBounds(450, 20, 450, 370);
+		tblPanel.setBackground(Color.white);
+		
+		this.add(ADDB);
+		this.add(tblPanel);
+		this.add(btnControl);
+		this.add(STI);
+		this.add(EDIT);
+		this.add(DEL);
+		this.add(SAVE);
+		this.add(CANCEL);
+		this.add(img);
+		this.setLayout(null);
+		this.setVisible(true);
+		
+	}
+
+}
+
+

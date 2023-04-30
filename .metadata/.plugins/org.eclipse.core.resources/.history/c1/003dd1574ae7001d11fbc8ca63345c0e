@@ -1,0 +1,9 @@
+package roque;
+
+import javax.swing.JFrame;
+
+public class Intro extends JFrame {
+	
+	Intr(){}
+
+}

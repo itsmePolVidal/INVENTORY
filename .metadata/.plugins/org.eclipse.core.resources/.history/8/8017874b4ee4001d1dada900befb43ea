@@ -1,0 +1,167 @@
+package inventory;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class InvF extends JFrame{
+
+
+
+
+	
+	//this will create a new Panel with BorderLayout
+	JPanel tblPanel = new JPanel(new BorderLayout());
+	
+	//this will create an array of JTextField with fixed size of 5
+	JTextField [] txtFields = new JTextField[6];
+	
+	//this will create an array of JLabel with fixed size of 5
+	JLabel [] lblFields = new JLabel[6];
+	
+	//this string array will be the text of the Jlabel
+	String [] strLblFields = {"Item Code : ", "Item Description : ", "Price : ", "Size : ", "Stocks : ","Re-Order Point : "};
+	
+	//this will create a JButton
+	JButton btnControl = new JButton();
+	JButton STI = new JButton();
+	JButton EDIT = new JButton();
+	JButton DEL = new JButton();
+	JButton SAVE = new JButton();
+	JButton CANCEL = new JButton();
+	
+	InvF(){
+		this.setTitle("Table");
+		this.setSize(850, 450);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		this.setResizable(false);
+		
+		int y = 50;
+		//this loop will set the properties of JTextField , JLabel
+		for(int i = 0; i <= lblFields.length -1 ; i++) {
+			//properties of JTextField
+			txtFields[i] = new JTextField();
+			txtFields[i].setBounds(180, y, 150, 25);
+			this.add(txtFields[i]);
+			
+			//properties of JLabel
+			lblFields[i] = new JLabel();
+			lblFields[i].setText(strLblFields[i]);
+			lblFields[i].setBounds(50, y, 150, 25);
+			this.add(lblFields[i]);
+			y+=30;
+		}
+		
+		btnControl.setBounds(120, 280, 100, 30);
+		btnControl.setText("ADD");
+		btnControl.setFocusable(false);
+		btnControl.addActionListener(new ActionListener() 
+		
+		{
+			
+		//ADD BUTTON	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		STI.setBounds(20, 280, 100, 30);
+		STI.setText("STOCK IN");
+		STI.setFocusable(false);
+		STI.addActionListener(new ActionListener() 
+		
+		{
+			
+		//STOCK IN BUTTON	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		EDIT.setBounds(120, 280, 100, 30);
+		EDIT.setText("EDIT");
+		EDIT.setFocusable(false);
+		EDIT.addActionListener(new ActionListener() 
+		
+		{
+			
+		//EDIT BUTTON	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		DEL.setBounds(120, 280, 100, 30);
+		DEL.setText("DELETE");
+		DEL.setFocusable(false);
+		DEL.addActionListener(new ActionListener() 
+		
+		{
+			
+		//DELETE BUTTON	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		SAVE.setBounds(120, 280, 100, 30);
+		SAVE.setText("SAVE");
+		SAVE.setFocusable(false);
+		SAVE.addActionListener(new ActionListener() 
+		
+		{
+			
+		//SAVE BUTTON	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		CANCEL.setBounds(120, 280, 100, 30);
+		CANCEL.setText("CANCEL");
+		CANCEL.setFocusable(false);
+		CANCEL.addActionListener(new ActionListener() 
+		
+		{
+			
+		//CANCEL BUTTON
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		tblPanel.setBounds(350, 20, 450, 370);
+		tblPanel.setBackground(Color.white);
+		
+		this.add(tblPanel);
+		this.add(btnControl);
+		this.add(STI);
+		this.add(EDIT);
+		this.add(DEL);
+		this.add(SAVE);
+		this.add(CANCEL);
+		this.setLayout(null);
+		this.setVisible(true);
+		
+	}
+
+}
+
+

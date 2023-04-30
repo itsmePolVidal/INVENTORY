@@ -1,0 +1,23 @@
+package roque;
+
+import javax.swing.JFrame;
+
+public class Intro extends JFrame {
+	
+	Intro(){
+		
+		this.setSize(800,500);
+		this.setLocationRelativeTo(null);
+		this.setResizable(false);
+		this.setTitle("Inventory");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		setLayout(null);
+		setVisible(true);
+		
+		
+	}
+	
+		
+
+}
